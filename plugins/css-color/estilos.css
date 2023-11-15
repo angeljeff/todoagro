@@ -1,0 +1,19 @@
+/* Estilo para los radio buttons */
+input[type="radio"] {
+    display: none; /* Oculta los radio buttons por defecto */
+}
+
+/* Estilo para las etiquetas de colores */
+.color-label {
+    width: 50px; /* Ancho de las etiquetas de colores */
+    height: 50px; /* Alto de las etiquetas de colores */
+    display: inline-block;
+    border-radius: 50%; /* Forma circular */
+    cursor: pointer;
+    margin-right: 10px; /* Espacio entre etiquetas */
+}
+
+/* Estilo para el radio button seleccionado */
+input[type="radio"]:checked + .color-label {
+    transform: scale(1.2); /* Aumenta el tamaño del círculo del color seleccionado */
+}

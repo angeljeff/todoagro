@@ -1,0 +1,63 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinear al principio */
+}
+
+.mesada-card {
+    padding: 20px;
+    margin: 10px;
+    width: calc(20% - 20px);
+    background-color: #f1c40f;
+    border-radius: 10px;
+    position: relative;
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+.mesada-card p {
+    margin: 0;
+}
+
+.mesada-id {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.mesada-nombre {
+    font-size: 1.5em;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.mesada-capacidad {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 1em;
+}
+
+/* Estilos para dispositivos pequeños (hasta 767px de ancho) */
+@media (max-width: 767px) {
+    .card-container {
+        flex-direction: column; /* Apilar los cuadros en dispositivos pequeños */
+    }
+
+    .mesada-card {
+        width: 48%; /* Ancho del cuadro en dispositivos pequeños (dos por fila) */
+        margin: 1%; /* Margen entre los cuadros */
+    }
+}
+
+/* Estilos para dispositivos grandes (más de 767px de ancho) */
+@media (min-width: 768px) {
+    .card-container {
+        justify-content: space-between; /* Distribuir de manera uniforme */
+    }
+
+    .mesada-card {
+        width: calc(20% - 20px);
+        margin: 10px;
+    }
+}
